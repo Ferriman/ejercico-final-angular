@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http'
+import { ClienteModule } from './cliente/cliente.module';
+import { WebMainModule } from './web-main/web-main.module';
+import { UsuarioModule } from './usuario/usuario.module';
+import { ProductoModule } from './producto/producto.module';
+
+
 
 @NgModule({
   declarations: [
@@ -10,7 +16,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ClienteModule,
+    WebMainModule,
+    UsuarioModule,
+    ProductoModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
